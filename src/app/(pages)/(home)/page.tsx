@@ -10,7 +10,7 @@ export default function Home() {
             title="Teste do Kick off"
             subtitle="Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off!"
             buttonLabel="Saiba mais"
-            buttonOnClick={console.log("Teste do Kick off")}
+            href="/"
             image="/images/launchig-starship.svg"
             imageAlt="Imagem de um foguete"
          />

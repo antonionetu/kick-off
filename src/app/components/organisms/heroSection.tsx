@@ -1,18 +1,19 @@
 import Image from "next/image"
 import TitleSubtitleAndButton from "../molecules/titleSubtitleAndButton"
-import { reverse } from "dns"
 
 interface HeroProps {
    title: string
    subtitle: string
    buttonLabel: string
-   buttonOnClick: void
+   href: string
    image: string
    imageAlt: string
    reverse?: boolean
 }
 
 const HeroSection = (props: HeroProps) => {
+   const { title, subtitle, buttonLabel, href, image, imageAlt } = props
+
    return (
       <section
          className={`flex ${
@@ -20,14 +21,14 @@ const HeroSection = (props: HeroProps) => {
          } justify-between items-center my-auto h-screen`}
       >
          <TitleSubtitleAndButton
-            title={props.title}
-            subtitle={props.subtitle}
-            buttonLabel={props.buttonLabel}
-            buttonOnClick={props.buttonOnClick}
+            title={title}
+            subtitle={subtitle}
+            buttonLabel={buttonLabel}
+            hrefButton={href}
          />
          <Image
-            src={props.image}
-            alt={props.imageAlt}
+            src={image}
+            alt={imageAlt}
             width={500}
             height={300}
             className="mx-32 z-20"
