@@ -11,7 +11,7 @@ interface ButtonProps {
 const ButtonLink = ({ children, href }: ButtonProps) => {
    return (
       <>
-         <button className="px-8 py-2 mt-4 text-white font-bold bg-blue-500 rounded-full duration-150 hover:bg-blue-600">
+         <button className="px-8 py-2 mt-4 text-white font-bold bg-blue-500 rounded-full duration-150 hover:bg-blue-600 z-20">
             <Link href={href}>{children}</Link>
          </button>
       </>

@@ -16,9 +16,7 @@ const Accordion = (props: AccordionProps) => {
    const [isOpen, setIsOpen] = useState(false)
    const { text, imageSrc, altImageSrc } = props
 
-   const handleIsOpen = isOpen
-      ? "w-[400px] shadow-md"
-      : "w-[100px]"
+   const handleIsOpen = isOpen ? "w-[400px] bg-white shadow-md" : "w-[200px]"
 
    return (
       <motion.div
@@ -28,7 +26,7 @@ const Accordion = (props: AccordionProps) => {
          className={`${handleIsOpen} h-[200px] flex justify-around items-center cursor-pointer`}
          onClick={() => setIsOpen(!isOpen)}
       >
-         <Image src={imageSrc} alt={altImageSrc} width={100} height={100} />
+         <Image src={imageSrc} alt={altImageSrc} width={150} height={150} />
          <p className={`${!isOpen && "hidden"}`}>{text}</p>
       </motion.div>
    )

@@ -2,6 +2,7 @@ import Accordion from "../atoms/client/accordion"
 import "@/style/animations/bouncing.css"
 import Title from "../atoms/title"
 import SubTitle from "../atoms/subtitle"
+import ButtonLink from "../atoms/buttonLink"
 
 interface AccordionSectionProps {
    texts: string[]
@@ -13,15 +14,15 @@ const AccordionSection = (props: AccordionSectionProps) => {
    const { texts, imageSrcs, altImageSrcs } = props
 
    return (
-      <section className="flex flex-col justify-center items-center space-y-16 h-[75vh]">
-         <div className="text-center space-y-4 w-2/5">
+      <>
+         <div className="text-center space-y-4 w-2/5 z-20">
             <Title>Nossos serviços</Title>
             <SubTitle>
                teste kick off teste kick off teste kick off teste kick off teste
                kick off teste kick off teste kick off!
             </SubTitle>
          </div>
-         <div className="flex justify-center items-center gap-24 ">
+         <div className="flex justify-center items-center gap-24 z-20">
             {texts.map((textItem, index) => (
                <div key={`accordion_${index}`}>
                   <Accordion
@@ -32,7 +33,8 @@ const AccordionSection = (props: AccordionSectionProps) => {
                </div>
             ))}
          </div>
-      </section>
+         <ButtonLink href="/">Saber mais</ButtonLink>
+      </>
    )
 }
 
