@@ -15,7 +15,7 @@ const HeroSection = (props: HeroProps) => {
    const { title, subtitle, buttonLabel, href, image, imageAlt } = props
 
    return (
-      <section
+      <div
          className={`flex ${
             props.reverse && "flex-row-reverse"
          } justify-between items-center my-auto h-screen`}
@@ -33,7 +33,7 @@ const HeroSection = (props: HeroProps) => {
             height={300}
             className="mx-32 z-20"
          />
-      </section>
+      </div>
    )
 }
 
