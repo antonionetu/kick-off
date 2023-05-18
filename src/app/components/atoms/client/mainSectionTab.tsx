@@ -3,21 +3,44 @@ import { motion, AnimatePresence } from "framer-motion"
 const tabContents = [
    {
       label: "HTML",
-      content: "HTML content",
+      content: `<!DOCTYPE html>  
+<html lang="pt-br">
+   <head>
+      <title>Kick off</title>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <main>
+      <h1>Você consegue!</h1>
+      </main>
+   </body>
+</html>`,
    },
    {
       label: "CSS",
-      content: "CSS content",
+      content: `body {
+   background-color: black;
+   color: white;
+}
+
+h1 {
+   font-family: Poppins;
+}
+      `,
    },
    {
       label: "JS",
-      content: "JS content",
+      content: `const titulo = document.querySelector("h1")
+
+titulo.addEventListener("click", function () {
+   alert("Pois é... Você mesmo!");
+});`,
    },
 ]
 
 const MainSectionTab = ({ selectedTab }: { selectedTab: string }) => {
    return (
-      <div className="p-16">
+      <div className="h-[50vh] p-8">
          <AnimatePresence mode="wait">
             <motion.div
                key={selectedTab ? selectedTab : "empty"}
@@ -26,12 +49,16 @@ const MainSectionTab = ({ selectedTab }: { selectedTab: string }) => {
                exit={{ y: -10, opacity: 0 }}
                transition={{ duration: 0.2 }}
             >
-               {tabContents.map(
-                  (item, index) =>
-                     item.label === selectedTab && (
-                        <div key={index}>{item.content}</div>
-                     )
-               )}
+               <pre>
+                  <code className="language-markup">
+                     {tabContents.map(
+                        (item, index) =>
+                           item.label === selectedTab && (
+                              <div key={index}>{item.content}</div>
+                           )
+                     )}
+                  </code>
+               </pre>
             </motion.div>
          </AnimatePresence>
       </div>

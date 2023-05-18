@@ -14,7 +14,7 @@ interface NavigationTabProps {
 const NavigationTab = ({ selectedTab, setSelectedTab }: NavigationTabProps) => {
    return (
       <nav>
-         <ul className="flex w-fit border-4">
+         <ul className="flex border-4">
             {tabs.map((item, index) => (
                <Tab
                   key={index}

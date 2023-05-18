@@ -7,6 +7,7 @@ import {
 import AccordionSection from "@/app/components/molecules/accordionSection"
 import FirstHomeBlob from "@/app/components/molecules/elements/blobs/home"
 import TabsSection from "@/app/components/organisms/tabsSection"
+import CardSection from "@/app/components/organisms/cardSection"
 
 export default function Home() {
    return (
@@ -71,8 +72,33 @@ export default function Home() {
             />
          </section>
 
-         <section className="flex flex-col w-fit mx-auto border-4 rounded-md my-4">
+         <section className="flex flex-col w-fit mx-auto border-4 rounded-md my-4 max-w-[50vw]">
             <TabsSection />
+         </section>
+
+         <section className="m-32">
+            <CardSection
+               titles={[
+                  "Teste do Kick off",
+                  "Teste do Kick off",
+                  "Teste do Kick off",
+               ]}
+               subtitles={[
+                  "Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off!",
+                  "Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off!",
+                  "Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off Teste do Kick off!",
+               ]}
+               imageSrcs={[
+                  "/images/launchig-starship.svg",
+                  "/images/launchig-starship.svg",
+                  "/images/launchig-starship.svg",
+               ]}
+               imageAlts={[
+                  "Imagem de um foguete",
+                  "Imagem de um foguete",
+                  "Imagem de um foguete",
+               ]}
+            />
          </section>
       </>
    )
