@@ -9,16 +9,16 @@ interface TitleSubtitleAndButtonProps {
    hrefButton: string
 }
 
-const TitleSubtitleAndButton = (props: TitleSubtitleAndButtonProps) => {
+const HeroContent = (props: TitleSubtitleAndButtonProps) => {
    const { title, subtitle, buttonLabel, hrefButton } = props
 
    return (
       <div className="w-1/2 space-y-8 p-32">
-         <Title>{title}</Title>
-         <SubTitle>{subtitle}</SubTitle>
+         <Title tag="h1">{title}</Title>
+         <SubTitle tag="p">{subtitle}</SubTitle>
          <ButtonLink href={hrefButton}>{buttonLabel}</ButtonLink>
       </div>
    )
 }
 
-export default TitleSubtitleAndButton
+export default HeroContent

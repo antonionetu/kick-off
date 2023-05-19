@@ -1,5 +1,5 @@
 import Image from "next/image"
-import TitleSubtitleAndButton from "../molecules/titleSubtitleAndButton"
+import HeroContent from "../molecules/heroContent"
 
 interface HeroProps {
    title: string
@@ -20,7 +20,7 @@ const HeroSection = (props: HeroProps) => {
             props.reverse && "flex-row-reverse"
          } justify-between items-center my-auto h-screen`}
       >
-         <TitleSubtitleAndButton
+         <HeroContent
             title={title}
             subtitle={subtitle}
             buttonLabel={buttonLabel}

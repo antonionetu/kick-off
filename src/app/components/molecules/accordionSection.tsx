@@ -16,8 +16,8 @@ const AccordionSection = (props: AccordionSectionProps) => {
    return (
       <>
          <div className="text-center space-y-4 w-2/5 z-20">
-            <Title>Nossos serviços</Title>
-            <SubTitle>
+            <Title tag="h2">Nossos serviços</Title>
+            <SubTitle tag="p">
                teste kick off teste kick off teste kick off teste kick off teste
                kick off teste kick off teste kick off!
             </SubTitle>

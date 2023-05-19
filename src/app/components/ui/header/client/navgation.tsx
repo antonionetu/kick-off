@@ -9,8 +9,8 @@ const Navigation = () => {
 
    const getClassForNavItem = (path: string) =>
       isCurrentPath(path)
-         ? "font-black text-2xl xl:text-4xl"
-         : "font-medium text-gray-400 text-2xl xl:text-4xl"
+         ? "font-black text-2xl"
+         : "font-medium text-gray-400 text-2xl"
 
    return (
       <nav>

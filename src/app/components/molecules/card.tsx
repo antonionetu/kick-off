@@ -20,10 +20,13 @@ const Card = (props: CardProps) => {
             <Image src={imageSrc} alt={imageAlt} width={100} height={100} />
             <div className="space-y-8">
                <div className="space-y-4">
-                  <Title>{title}</Title>
-                  <SubTitle>{subtitle}</SubTitle>
+                  <Title tag="h3">{title}</Title>
+                  <SubTitle tag="p">{subtitle}</SubTitle>
                </div>
-               <Link className="text-blue-400 flex items-center gap-2 hover:gap-4 duration-150" href={href}>
+               <Link
+                  className="text-blue-400 flex items-center gap-2 hover:gap-4 duration-150"
+                  href={href}
+               >
                   Saiba mais
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
