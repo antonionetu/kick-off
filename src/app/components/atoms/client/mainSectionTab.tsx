@@ -24,7 +24,7 @@ const tabContents = [
 }
 
 h1 {
-   font-family: Poppins;
+   font-family: arial;
 }
       `,
    },
