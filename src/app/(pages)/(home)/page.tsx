@@ -15,9 +15,7 @@ import { mockImagesAlt, mockImagesSrc, mockSubtitles, mockTitles } from "./mock"
 export default function Home() {
    return (
       <>
-         <div className="pt-16" />
-
-         <section className="relative">
+         <section className="relative top-8">
             <FirstHomeGrid />
             <HeroSection
                title="Teste do Kick off"
