@@ -15,9 +15,9 @@ const Card = (props: CardProps) => {
    const { title, subtitle, imageSrc, imageAlt, href } = props
 
    return (
-      <div>
+      <div className="bg-white z-40">
          <div className="flex flex-col items-center shadow-lg p-8 rounded-md">
-            <Image src={imageSrc} alt={imageAlt} width={100} height={100} />
+            <Image src={imageSrc} alt={imageAlt} width={200} height={200} />
             <div className="space-y-8">
                <div className="space-y-4">
                   <Title tag="h3">{title}</Title>

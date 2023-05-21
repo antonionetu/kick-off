@@ -46,4 +46,17 @@ const ThirdHomeGrid = () => {
    )
 }
 
-export { FirstHomeGrid, SecondHomeGrid, ThirdHomeGrid }
+const FourthHomeGrid = () => {
+   return (
+      <span>
+         <div className="absolute left-16 top-32 bouncing">
+            <Grid />
+         </div>
+         <div className="absolute right-16 bottom-32 bouncing">
+            <Grid />
+         </div>
+      </span>
+   )
+}
+
+export { FirstHomeGrid, SecondHomeGrid, ThirdHomeGrid, FourthHomeGrid }

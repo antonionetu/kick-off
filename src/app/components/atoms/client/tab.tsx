@@ -8,7 +8,7 @@ interface TabProps {
 }
 
 const Tab = ({ item, selectedTab, setSelectedTab }: TabProps) => {
-   const isSelected = item.label === selectedTab && "bg-slate-100"
+   const isSelected = item.label === selectedTab && "bg-slate-200"
 
    return (
       <li
